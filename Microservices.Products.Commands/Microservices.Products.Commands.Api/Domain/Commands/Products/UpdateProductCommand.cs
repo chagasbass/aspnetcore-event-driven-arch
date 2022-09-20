@@ -1,10 +1,4 @@
-﻿using Flunt.Validations;
-using MediatR;
-using Microservices.Products.Commands.Api.Domain.Commands.Bases;
-using Microservices.Products.Commands.Api.Domain.Commands.Categories;
-using MinimalApi.Extensions.Entities;
-
-namespace Microservices.Products.Commands.Api.Domain.Commands.Products;
+﻿namespace Microservices.Products.Commands.Api.Domain.Commands.Products;
 
 public class UpdateProductCommand : BaseEntity, IBaseCommand, IRequest<Guid>
 {

@@ -1,11 +1,9 @@
-﻿using Microservices.Products.Commands.Api.Domain.Enums;
-using Microservices.Products.Commands.Api.Domain.Messages.Bases;
-
-namespace Microservices.Products.Commands.Api.Domain.Events.Products;
+﻿namespace Microservices.Products.Commands.Api.Domain.Events.Products;
 
 public class ProductDeletedEvent : BaseEvent
 {
-    public ProductDeletedEvent(Guid id) : base(nameof(ProductDeletedEvent), OperationType.Delete)
+    public ProductDeletedEvent(Guid id)
+        : base(nameof(ProductDeletedEvent), OperationType.Delete, "")
     {
         Id = id;
     }

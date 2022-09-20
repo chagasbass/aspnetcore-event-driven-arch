@@ -1,0 +1,32 @@
+MICROSERVICES
+
+Microservices are small, loosely coupled applications or services that can fail 
+independently from each other.
+When a microservice fails, only a single function or process int the system should become
+unavailable, while the rest of the sysmte remains unaffected.
+
+**Não deve compartilhar código ou dados
+
+"Independence and Autonomy is more important than code reusability in Microservices"
+
+
+Quando precisamos de CQRS
+
+*Dado é geralmente mais pesquisado do que alterado ou vice-versa
+*Permite escalar as apis de leitura e escrita de modo independente
+*Permite otimizar  as leituras e escritas dos esquemas de dados, onde os esquemas de leitura podem serm otimizados para queries e os de escrita para commands (remoção da complexidade das consultas joins etc)
+*Permite a separação das responsabilidades onde para a escrita a regra de negócio pode ser mais complexa, e para a leitura , mais simples
+-------------------------------------------------------------------------------
+EVENT SOURCING
+
+-> Pattern usado para verificar as mudanças feitas em uma entidade gravada no banco de dados
+gravando uma sequencia de eventos imutáveis sendo o oposto de apenas guardar o estado atual
+
+
+*Contém um completo log auditável
+*Os estados da entidade , geralmente dos agregados podem ser recriados rodando os eventos guardados no envent store
+*Permite que as operações de escrita tenham melhor performance, pois os eventos são gerados e guardados no event store. As operação de atualização e exclusão não são feitas dentro do event 
+store.
+
+*Em caso de falhas o event store é usado para restaurar a entidade no banco de leitura
+

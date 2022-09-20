@@ -1,0 +1,16 @@
+﻿global using Flunt.Validations;
+global using MediatR;
+global using Microservices.Products.Commands.Api.Domain.Commands.Bases;
+global using Microservices.Products.Commands.Api.Domain.Commands.Categories;
+global using Microservices.Products.Commands.Api.Domain.Enums;
+global using Microservices.Products.Commands.Api.Domain.Events.Categories;
+global using Microservices.Products.Commands.Api.Domain.Messages.Bases;
+global using Microservices.Products.Commands.Api.Infrastructure.Data.DataContexts;
+global using Microservices.Products.Commands.Api.Infrastructure.Messagings.Base;
+global using Microsoft.Extensions.Options;
+global using MinimalApi.Extensions.Entities;
+global using MinimalApi.Extensions.Shared.Configurations;
+global using MinimalApi.Extensions.Shared.Enums;
+global using MinimalApi.Extensions.Shared.Notifications;
+global using MongoDB.Bson;
+global using MongoDB.Driver;

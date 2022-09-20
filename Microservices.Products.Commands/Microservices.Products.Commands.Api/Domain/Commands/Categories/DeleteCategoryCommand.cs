@@ -1,9 +1,4 @@
-﻿using Flunt.Validations;
-using MediatR;
-using Microservices.Products.Commands.Api.Domain.Commands.Bases;
-using MinimalApi.Extensions.Entities;
-
-namespace Microservices.Products.Commands.Api.Domain.Commands.Categories;
+﻿namespace Microservices.Products.Commands.Api.Domain.Commands.Categories;
 
 public class DeleteCategoryCommand : BaseEntity, IBaseCommand, IRequest<ICommandResult>
 {

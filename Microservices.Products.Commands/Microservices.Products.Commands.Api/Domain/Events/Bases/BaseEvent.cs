@@ -1,7 +1,4 @@
-﻿using MediatR;
-using Microservices.Products.Commands.Api.Domain.Enums;
-
-namespace Microservices.Products.Commands.Api.Domain.Messages.Bases;
+﻿namespace Microservices.Products.Commands.Api.Domain.Messages.Bases;
 
 public abstract class BaseEvent : INotification
 {

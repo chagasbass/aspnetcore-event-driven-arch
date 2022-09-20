@@ -1,7 +1,4 @@
-﻿using Microservices.Products.Commands.Api.Domain.Enums;
-using Microservices.Products.Commands.Api.Domain.Messages.Bases;
-
-namespace Microservices.Products.Commands.Api.Domain.Events.Products;
+﻿namespace Microservices.Products.Commands.Api.Domain.Events.Products;
 
 public class ProductCreatedEvent : BaseEvent
 {
@@ -10,7 +7,8 @@ public class ProductCreatedEvent : BaseEvent
     public int Quantity { get; private set; }
     public decimal Price { get; private set; }
 
-    public ProductCreatedEvent(Guid categoryId, string? name, int quantity, decimal price) : base(nameof(ProductCreatedEvent), OperationType.Create)
+    public ProductCreatedEvent(Guid categoryId, string? name, int quantity, decimal price)
+        : base(nameof(ProductCreatedEvent), OperationType.Create, "")
     {
         Id = Guid.NewGuid();
         CategoryId = categoryId;

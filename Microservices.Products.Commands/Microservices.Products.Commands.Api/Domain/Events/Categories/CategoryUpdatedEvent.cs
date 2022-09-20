@@ -1,19 +1,16 @@
-﻿using Microservices.Products.Commands.Api.Domain.Enums;
-using Microservices.Products.Commands.Api.Domain.Messages.Bases;
-
-namespace Microservices.Products.Commands.Api.Domain.Events.Categories;
+﻿namespace Microservices.Products.Commands.Api.Domain.Events.Categories;
 
 public class CategoryUpdatedEvent : BaseEvent
 {
-    public Guid Id { get; private set; }
+    public Guid AggregateId { get; private set; }
     public string? Name { get; private set; }
     public string? Description { get; private set; }
 
-    public CategoryUpdatedEvent(Guid id, string? name, string? description) : base(nameof(CategoryUpdatedEvent), OperationType.Update)
+    public CategoryUpdatedEvent(Guid id, string? name, string? description)
+        : base(nameof(CategoryUpdatedEvent), OperationType.Update, "")
     {
-        Id = id;
+        AggregateId = id;
         Name = name;
         Description = description;
-
     }
 }
